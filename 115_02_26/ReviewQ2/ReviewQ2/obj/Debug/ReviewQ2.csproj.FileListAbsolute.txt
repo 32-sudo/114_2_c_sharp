@@ -1,0 +1,9 @@
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\bin\Debug\ReviewQ2.exe.config
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\bin\Debug\ReviewQ2.exe
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\bin\Debug\ReviewQ2.pdb
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.csproj.AssemblyReference.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.Properties.Resources.resources
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.csproj.GenerateResource.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.csproj.CoreCompileInputs.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.exe
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\ReviewQ2\ReviewQ2\obj\Debug\ReviewQ2.pdb

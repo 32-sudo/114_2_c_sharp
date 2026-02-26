@@ -1,0 +1,186 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Review__Q1
+{
+    public partial class Form1 : Form
+    {
+        // 定義遊戲選擇
+        private enum Choice { Stone, Paper, Scissor, None }
+
+        // 儲存遊戲數據的變數
+        private Choice computerChoice;
+        private Choice playerChoice;
+        private int playerWins = 0;
+        private int computerWins = 0;
+        private int ties = 0;
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // 初始化表單，清空圖片和結果顯示
+            computerPictureBox.Image = null;
+            playerPictureBox.Image = null;
+            resultLabel.Text = "";
+        }
+
+        /// <summary>
+        /// 產生電腦的隨機選擇（石頭/布/剪刀）
+        /// </summary>
+        private void getCompChoice()
+        {
+            Random random = new Random();
+            int choice = random.Next(0, 3);
+            
+            switch (choice)
+            {
+                case 0:
+                    computerChoice = Choice.Stone;
+                    break;
+                case 1:
+                    computerChoice = Choice.Paper;
+                    break;
+                case 2:
+                    computerChoice = Choice.Scissor;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 根據電腦的選擇，在對應的 PictureBox 中顯示正確的圖片
+        /// </summary>
+        private void showComputerImage()
+        {
+            switch (computerChoice)
+            {
+                case Choice.Stone:
+                    computerPictureBox.Text = "石頭";
+                    computerPictureBox.BackColor = Color.LightGray;
+                    break;
+                case Choice.Paper:
+                    computerPictureBox.Text = "布";
+                    computerPictureBox.BackColor = Color.LightGray;
+                    break;
+                case Choice.Scissor:
+                    computerPictureBox.Text = "剪刀";
+                    computerPictureBox.BackColor = Color.LightGray;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 根據玩家的選擇，在對應的 PictureBox 中顯示正確的圖片
+        /// </summary>
+        private void showPlayerImage()
+        {
+            switch (playerChoice)
+            {
+                case Choice.Stone:
+                    playerPictureBox.Text = "石頭";
+                    playerPictureBox.BackColor = Color.LightGray;
+                    break;
+                case Choice.Paper:
+                    playerPictureBox.Text = "布";
+                    playerPictureBox.BackColor = Color.LightGray;
+                    break;
+                case Choice.Scissor:
+                    playerPictureBox.Text = "剪刀";
+                    playerPictureBox.BackColor = Color.LightGray;
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// 比較玩家和電腦的選擇，判斷輸贏，更新勝場計數，並顯示結果
+        /// </summary>
+        private void showWinner()
+        {
+            string result = "";
+
+            // 判斷輸贏
+            if (playerChoice == computerChoice)
+            {
+                result = "平手！";
+                ties++;
+            }
+            else if ((playerChoice == Choice.Stone && computerChoice == Choice.Scissor) ||
+                     (playerChoice == Choice.Paper && computerChoice == Choice.Stone) ||
+                     (playerChoice == Choice.Scissor && computerChoice == Choice.Paper))
+            {
+                result = "玩家贏！";
+                playerWins++;
+            }
+            else
+            {
+                result = "電腦贏！";
+                computerWins++;
+            }
+
+            // 顯示結果和統計
+            resultLabel.Text = $"{result}\n玩家: {playerWins} 勝  電腦: {computerWins} 勝  平手: {ties}";
+        }
+
+        /// <summary>
+        /// 處理玩家選擇石頭
+        /// </summary>
+        private void stoneButton_Click(object sender, EventArgs e)
+        {
+            playerChoice = Choice.Stone;
+            PlayGame();
+        }
+
+        /// <summary>
+        /// 處理玩家選擇布
+        /// </summary>
+        private void paperButton_Click(object sender, EventArgs e)
+        {
+            playerChoice = Choice.Paper;
+            PlayGame();
+        }
+
+        /// <summary>
+        /// 處理玩家選擇剪刀
+        /// </summary>
+        private void scissorButton_Click(object sender, EventArgs e)
+        {
+            playerChoice = Choice.Scissor;
+            PlayGame();
+        }
+
+        /// <summary>
+        /// 執行遊戲邏輯
+        /// </summary>
+        private void PlayGame()
+        {
+            getCompChoice();
+            showComputerImage();
+            showPlayerImage();
+            showWinner();
+        }
+
+        /// <summary>
+        /// 處理結束遊戲並顯示統計
+        /// </summary>
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            string message = $"遊戲結束！\n\n" +
+                           $"玩家勝場：{playerWins}\n" +
+                           $"電腦勝場：{computerWins}\n" +
+                           $"平手次數：{ties}\n";
+            
+            MessageBox.Show(message, "遊戲統計", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
+        }
+    }
+}

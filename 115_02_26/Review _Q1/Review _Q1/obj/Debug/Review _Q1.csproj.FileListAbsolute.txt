@@ -1,0 +1,11 @@
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\bin\Debug\Review _Q1.exe.config
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\bin\Debug\Review _Q1.exe
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\bin\Debug\Review _Q1.pdb
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.csproj.AssemblyReference.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review__Q1.Form1.resources
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review__Q1.Properties.Resources.resources
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.csproj.GenerateResource.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.csproj.CoreCompileInputs.cache
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.exe
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.pdb
+C:\Users\m303\Desktop\114_2_c_sharp\115_02_26\Review _Q1\Review _Q1\obj\Debug\Review _Q1.exe.config
